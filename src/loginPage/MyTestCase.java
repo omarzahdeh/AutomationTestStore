@@ -33,6 +33,7 @@ public class MyTestCase {
 		driver.navigate().to(SignupPage);
 		WebElement FirstName = driver.findElement(By.name("firstname"));
 		FirstName.sendKeys("omar");
+		//hihi
 	}
 
 }
