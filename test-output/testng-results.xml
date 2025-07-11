@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T13:43:24 EET" name="Default suite" finished-at="2025-07-09T13:43:28 EET" duration-ms="4497">
+  <suite started-at="2025-07-11T20:49:49 EET" name="Default suite" finished-at="2025-07-11T20:49:52 EET" duration-ms="3136">
     <groups>
     </groups>
-    <test started-at="2025-07-09T13:43:24 EET" name="Default test" finished-at="2025-07-09T13:43:28 EET" duration-ms="4497">
+    <test started-at="2025-07-11T20:49:49 EET" name="Default test" finished-at="2025-07-11T20:49:52 EET" duration-ms="3136">
       <class name="loginPage.MyTestCase">
-        <test-method is-config="true" signature="mysetup()[pri:0, instance:loginPage.MyTestCase@23bff419]" started-at="2025-07-09T13:43:24 EET" name="mysetup" finished-at="2025-07-09T13:43:28 EET" duration-ms="3810" status="PASS">
+        <test-method is-config="true" signature="mysetup()[pri:0, instance:loginPage.MyTestCase@23bff419]" started-at="2025-07-11T20:49:49 EET" name="mysetup" finished-at="2025-07-11T20:49:50 EET" duration-ms="1581" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mysetup -->
-        <test-method signature="Singup()[pri:0, instance:loginPage.MyTestCase@23bff419]" started-at="2025-07-09T13:43:28 EET" name="Singup" finished-at="2025-07-09T13:43:28 EET" duration-ms="632" status="PASS">
+        <test-method signature="Singup()[pri:0, instance:loginPage.MyTestCase@23bff419]" started-at="2025-07-11T20:49:50 EET" name="Singup" finished-at="2025-07-11T20:49:52 EET" duration-ms="1523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Singup -->
