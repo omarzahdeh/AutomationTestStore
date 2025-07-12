@@ -82,10 +82,11 @@ public class MyTestCase {
 		adderess2Inbut.sendKeys(address_2);
 		CityInbut.sendKeys(city);
 		
-		
+		int numberOfOptionss=countryselect.findElements(By.tagName("option")).size();
+		System.out.println();
 		Select myselectforthecountry =new Select(countryselect);
-		
-		myselectforthecountry.selectByContainsVisibleText("Jordan");
+		int randomcountryIndex=rand.nextInt(1,numberOfOptionss);
+		myselectforthecountry.selectByIndex(randomcountryIndex);
 		
 		Thread.sleep(1000);
 		
@@ -104,7 +105,7 @@ public class MyTestCase {
 		passworInput.sendKeys(password);
 		passwordconfirmInput.sendKeys(passwordconfirm);
 		agreeBox.click();
-		continuebotton.click();
+		//continuebotton.click();
 		
 		
 		
