@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -24,7 +25,7 @@ public class MyTestCase {
 	}
 
 	@Test
-	public void Singup() {
+	public void Singup() throws InterruptedException {
 
 		driver.navigate().to(SignupPage);
 // Element
@@ -40,6 +41,11 @@ public class MyTestCase {
         WebElement loginInbut = driver.findElement(By.id("AccountFrm_loginname"));
         WebElement passworInput =driver.findElement(By.id("AccountFrm_password"));
         WebElement passwordconfirmInput = driver.findElement(By.id("AccountFrm_confirm"));
+        WebElement agreeBox = driver.findElement(By.id("AccountFrm_agree"));
+        WebElement continuebotton = driver.findElement(By.cssSelector("button[title='Continue']"));
+        WebElement countryselect=driver.findElement(By.id("AccountFrm_country_id"));
+        WebElement regionselect=driver.findElement(By.id("AccountFrm_zone_id"));
+
         
 // data
 		String [] FirstNames = {"omar","mohammad","raghad","Remas","Hamza"};
@@ -75,10 +81,31 @@ public class MyTestCase {
 		address1Inbut.sendKeys(address_1);
 		adderess2Inbut.sendKeys(address_2);
 		CityInbut.sendKeys(city);
+		
+		
+		Select myselectforthecountry =new Select(countryselect);
+		
+		myselectforthecountry.selectByContainsVisibleText("Jordan");
+		
+		Thread.sleep(1000);
+		
+		
+	    int numberOfOptions=regionselect.findElements(By.tagName("option")).size();
+	    
+	    System.out.println();
+		
+		Select myselectfortheregion =new Select(regionselect);
+		int randomregionIndex=rand.nextInt(1,numberOfOptions);
+		myselectfortheregion.selectByIndex(randomregionIndex);
+
+		
 		zipcodInbut.sendKeys(zipcode);
 		loginInbut.sendKeys(login);
 		passworInput.sendKeys(password);
 		passwordconfirmInput.sendKeys(passwordconfirm);
+		agreeBox.click();
+		continuebotton.click();
+		
 		
 		
 		
